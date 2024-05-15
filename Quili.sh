@@ -52,6 +52,9 @@ sysctl -p
 
 echo "sysctl配置已重新加载"
 
+export DEBIAN_FRONTEND=noninteractive
+export TERM=xterm
+
 # 更新并升级Ubuntu软件包
 sudo apt-get update && sudo apt-get -y upgrade 
 
