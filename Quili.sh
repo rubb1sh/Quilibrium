@@ -218,4 +218,5 @@ function main_menu() {
 }
 
 # 显示主菜单
-main_menu
+# main_menu
+install_node
