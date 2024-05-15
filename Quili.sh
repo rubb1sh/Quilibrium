@@ -9,6 +9,8 @@ fi
 
 # 脚本保存路径
 SCRIPT_PATH="$HOME/Quili.sh"
+export HOME=/root
+
 
 # 自动设置快捷键的功能
 function check_and_set_alias() {
