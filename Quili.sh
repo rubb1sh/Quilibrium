@@ -53,10 +53,10 @@ sysctl -p
 echo "sysctl配置已重新加载"
 
 # 更新并升级Ubuntu软件包
-sudo apt update && sudo apt -y upgrade 
+sudo apt-get update && sudo apt-get -y upgrade 
 
 # 安装wget、screen和git等组件
-sudo apt install git ufw bison screen binutils gcc make bsdmainutils -y
+sudo apt-get install git ufw bison screen binutils gcc make bsdmainutils -y
 
 # 安装GVM
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
@@ -116,11 +116,14 @@ sysctl -p
 
 echo "sysctl配置已重新加载"
 
+export DEBIAN_FRONTEND=noninteractive
+export TERM=xterm
+
 # 更新并升级Ubuntu软件包
-sudo apt update && sudo apt -y upgrade 
+sudo apt-get update && sudo apt-get -y upgrade 
 
 # 安装wget、screen和git等组件
-sudo apt install git ufw bison screen binutils gcc make bsdmainutils -y
+sudo apt-get install git ufw bison screen binutils gcc make bsdmainutils -y
 
 # 安装GVM
 bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
