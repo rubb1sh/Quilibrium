@@ -62,7 +62,7 @@ sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get install git ufw bison screen binutils gcc make bsdmainutils -y
 
 # 安装GVM
-bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer | sudo bash
 source /root/.gvm/scripts/gvm
 
 gvm install go1.4 -B
