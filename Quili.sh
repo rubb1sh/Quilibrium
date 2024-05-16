@@ -88,6 +88,20 @@ chmod +x poor_mans_cd.sh
 # 创建一个screen会话并运行命令
 screen -dmS Quili bash -c './poor_mans_cd.sh'
 
+# 创建配置
+cd ceremonyclient/node 
+sed -i 's|listenGrpcMultiaddr:.*|listenGrpcMultiaddr: "/ip4/127.0.0.1/tcp/8337"|' .config/config.yml
+sed -i 's|listenRESTMultiaddr:.*|listenRESTMultiaddr: "/ip4/127.0.0.1/tcp/8338"|' .config/config.yml
+
+# 开放端口
+printf 'y\n' | sudo ufw enable
+sudo ufw allow 22
+sudo ufw allow 8336
+sudo ufw allow 8337
+sudo ufw allow 8338
+sudo ufw allow 8317
+sudo ufw allow 8316
+
 }
 
 
